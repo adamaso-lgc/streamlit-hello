@@ -8,6 +8,7 @@ st.set_page_config(
     page_icon="📝",
 )
 
+
 # Initialize Session State
 if 'todo_data' not in st.session_state:
     st.session_state.todo_data = defaultdict(list)

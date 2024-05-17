@@ -63,12 +63,9 @@ with st.form("new_todo_form"):
             new_event['todoName'] = todo_name
             todos_df = pd.concat([todos_df, new_event]).reset_index(drop=True)
 
-        #TODO
-
         conn.update(worksheet="Todo", data=todos_df.to_dict('list'))  # Update Google Sheets
         st.success("Event added successfully!")
-       
-       
+              
 
 # Display the current todo events
 with st.expander("Current Todos ⤵", expanded=True):
